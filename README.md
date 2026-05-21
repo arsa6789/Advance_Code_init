@@ -1,56 +1,65 @@
 # Codes Repository
 
-A collection of web development projects showcasing different applications and features.
+A small collection of web development projects with example applications and supporting files.
 
-## Project Structure
+## Repository Structure
 
 ```
 codes/
-├── package.json     # Project dependencies and metadata
-├── .gitignore       # Git ignore file
-└── Blog/            # Blog management application
-    ├── README.md    # Blog project documentation
-    ├── app.js       # Main application logic
-    ├── index.html   # Home page
-    ├── add/         # Add new blog post
+├── package.json         # Project dependencies and metadata
+├── package-lock.json    # Locked dependency versions
+├── .gitignore           # Git ignore file
+└── Blog/                # Blog management application
+    ├── README.md        # Blog project documentation
+    ├── app.js           # Main application logic for the blog home page
+    ├── index.html       # Blog home page
+    ├── style.css        # Shared Blog styles
+    ├── add/             # Add new blog post UI
     │   ├── app.js
     │   └── index.html
-    └── edit/        # Edit existing blog post
+    └── edit/            # Edit existing blog post UI
         ├── app.js
         └── index.html
 ```
 
-## Projects
+## Project Overview
 
 ### Blog Application
-A simple blog management system with the following features:
-- **View Blog Posts** - Browse all blog posts on the home page
-- **Add New Posts** - Create new blog posts
-- **Edit Posts** - Modify existing blog posts
+A simple client-side blog management app that demonstrates:
+- Viewing a list of blog posts
+- Adding new posts
+- Editing existing posts
+- Navigating between pages using plain HTML, CSS, and JavaScript
 
-## Getting Started
+## Quick Start
 
-1. Navigate to the `Blog` folder
-2. Open `index.html` in your web browser
-3. Use the navigation to explore, create, and edit blog posts
+1. Open the `Blog` folder.
+2. Open `index.html` in a web browser.
+3. Use the built-in navigation to view, add, and edit posts.
 
-## Requirements
+## Local Development
 
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Node.js (if using npm scripts)
+This project is primarily static and can be opened directly in the browser.
 
-## Installation
+If you want to serve it locally from a web server, install a simple server and run it from the repository root:
 
-If using npm dependencies, run:
 ```bash
 npm install
+npx http-server .
 ```
+
+Then open the URL shown in your browser.
+
+## Notes
+
+- The Blog app lives in `Blog/` and uses vanilla JavaScript.
+- `package.json` is included for dependency management and may be used for future tooling.
 
 ## Technologies
 
 - HTML5
 - CSS
-- JavaScript (Vanilla)
+- JavaScript
 
 ## License
 
