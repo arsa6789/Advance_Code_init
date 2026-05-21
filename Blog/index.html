@@ -1,16 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog website</title>
-</head>
-<body>
-    <button id="add-blog">Add Blog</button>
-    <div id="blog-wrapper"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Santagram</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">Santagram</div>
+      <nav class="nav-links">
+        <span id="user-greeting" class="hidden"></span>
+        <button id="auth-btn" class="btn btn-secondary"></button>
+        <button id="logout-btn" class="btn btn-link hidden"></button>
+      </nav>
+    </header>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <script src="app.js"></script>
-</body>
+    <main class="container">
+      <section id="auth-view" class="auth-card hidden">
+        <h2 id="auth-title">Create Account</h2>
+        <form id="auth-form">
+          <input type="email" id="auth-email" placeholder="email" required />
+          <input
+            type="password"
+            id="auth-password"
+            placeholder="password"
+            minlength="6"
+            required
+          />
+          <button id="auth-submit-btn" class="btn btn-primary">Sign up</button>
+        </form>
+        <p class="toggle-text">
+          <span id="auth-toggle-msg">Already have an account? </span>
+          <a href="#" id="auth-toggle-link">Login</a>
+        </p>
+      </section>
+      <section id="create-post-view" class="create-card hidden">
+        <h3>Submit a new Post</h3>
+        <form id="post-form">
+            <input type="text" id="post-titile" maxlength="150" placeholder="Title" required>
+            <textarea id="post-desc" placeholder="Body text (optional)" rows="4"></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </section>
+      <section id="feed-section">
+        <h2>Recent Posts</h2>
+        <div id="posts-container">
+            <p class="loading">Fetching the Posts....</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
