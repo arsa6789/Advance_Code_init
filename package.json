@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "create-react-app": "^5.1.0",
     "express": "^5.2.1",
-    "react": "^19.2.6"
+    "react": "^19.2.6",
+    "react-router": "^8.0.0"
   }
 }
