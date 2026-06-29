@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "@supabase/supabase-js": "^2.108.2",
-    "create-react-app": "^5.1.0",
+    "create-react-app": "^1.2.1",
     "express": "^5.2.1",
+    "fs": "^0.0.1-security",
+    "node-fetch": "^3.3.2",
     "react": "^19.2.6",
     "react-router": "^8.0.0"
   }
