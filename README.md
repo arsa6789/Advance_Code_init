@@ -1,65 +1,91 @@
-# Codes Repository
+# Advance Code Init
 
-A small collection of web development projects with example applications and supporting files.
+A personal learning repository for web development, frontend practice, backend basics, and small coding exercises.
 
 ## Repository Structure
 
-```
-codes/
-├── package.json         # Project dependencies and metadata
-├── package-lock.json    # Locked dependency versions
-├── .gitignore           # Git ignore file
-└── Blog/                # Blog management application
-    ├── README.md        # Blog project documentation
-    ├── app.js           # Main application logic for the blog home page
-    ├── index.html       # Blog home page
-    ├── style.css        # Shared Blog styles
-    ├── add/             # Add new blog post UI
-    │   ├── app.js
-    │   └── index.html
-    └── edit/            # Edit existing blog post UI
-        ├── app.js
-        └── index.html
+```text
+Advance_Code_init/
+├── assignments/                # Python practice files and exercises
+├── backend/
+│   ├── express/                # Basic Express server example
+│   └── postman/
+│       └── simple database/    # Small database-style practice app
+├── Blog/                       # Vanilla HTML/CSS/JS blog app
+├── Hackathon practice/
+│   ├── javascript/
+│   │   ├── asynchronous js/    # Async JS practice
+│   │   ├── DOM/                # DOM manipulation examples
+│   │   ├── Tic Tac Toe/       # JavaScript Tic-Tac-Toe project
+│   │   └── Weather App/       # Weather app UI and logic
+│   └── ReactJS/
+│       ├── React Practice/     # React learning exercises
+│       └── TicTacToe/          # React Tic-Tac-Toe app
+├── Pheonix code/               # Static web page practice
+├── package.json                # Root dependencies for the repo
+├── package-lock.json           # Lockfile for installed packages
+└── README.md                   # Project overview
 ```
 
-## Project Overview
+## What’s Included
 
-### Blog Application
-A simple client-side blog management app that demonstrates:
-- Viewing a list of blog posts
-- Adding new posts
-- Editing existing posts
-- Navigating between pages using plain HTML, CSS, and JavaScript
+### Assignments
+A collection of Python scripts and mini assignments for practicing programming concepts.
+
+### Blog
+A simple static blog application built with HTML, CSS, and JavaScript.
+
+### Backend
+Basic Node.js and Express examples, including a simple database-style practice app.
+
+### Hackathon Practice
+A mix of JavaScript and React projects covering:
+- DOM manipulation
+- Asynchronous JavaScript
+- Weather app development
+- Tic-Tac-Toe in plain JavaScript
+- Tic-Tac-Toe in React
+
+### Phoenix Code
+A small static front-end practice project.
 
 ## Quick Start
 
-1. Open the `Blog` folder.
-2. Open `index.html` in a web browser.
-3. Use the built-in navigation to view, add, and edit posts.
+### Static Projects
+Open the relevant HTML file directly in your browser, for example:
+- Blog/index.html
+- Pheonix code/index.html
 
-## Local Development
-
-This project is primarily static and can be opened directly in the browser.
-
-If you want to serve it locally from a web server, install a simple server and run it from the repository root:
+### React Projects
+Navigate into a React folder and install dependencies:
 
 ```bash
+cd "Hackathon practice/ReactJS/TicTacToe"
 npm install
-npx http-server .
+npm run dev
 ```
 
-Then open the URL shown in your browser.
+### Backend Example
+Run the Express server from the backend folder:
+
+```bash
+cd backend/express
+node index.js
+```
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- React
+- Node.js
+- Express
+- Python
 
 ## Notes
 
-- The Blog app lives in `Blog/` and uses vanilla JavaScript.
-- `package.json` is included for dependency management and may be used for future tooling.
-
-## Technologies
-
-- HTML5
-- CSS
-- JavaScript
+This repository is mainly used as a learning workspace, so the projects may be simple, experimental, or incomplete.
 
 ## License
 
