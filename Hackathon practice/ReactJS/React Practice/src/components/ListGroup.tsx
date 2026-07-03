@@ -7,6 +7,7 @@ interface Props {
   onSelectItem: (item: string) => void;
 }
 
+
 function ListGroup({ items, heading, onSelectItem }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   // const handleClick = (event : MouseEvent)=> console.log(event);
