@@ -7,7 +7,7 @@ import humidity_icon from "../Assets/humidity.png";
 import rain_icon from "../Assets/rain.png";
 import snow_icon from "../Assets/snow.png";
 import wind_icon from "../Assets/wind.png";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Weather = () => {
   const inputRef = useRef()
@@ -29,68 +29,30 @@ const Weather = () => {
     "13d": snow_icon,
     "13n": snow_icon,
   }
-  const search = useCallback(async (city = "") => {
-    const fetchWeather = async (url) => {
+  const search = async (city) => {
+    if(city === ""){
+      alert('Enter City Name || 输入城市名称')
+    }
+    try {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
       const response = await fetch(url);
       const data = await response.json();
       const icon = allIcons[data.weather[0].icon] || clear_icon;
-
       setWeatherData({
         humidity: data.main.humidity,
         windSpeed: data.wind.speed,
         temperature: Math.floor(data.main.temp),
         location: data.name,
-        icon: icon,
-      });
-    };
-
-    const trimmedCity = city?.trim();
-
-    if (trimmedCity) {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${trimmedCity}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
-      try {
-        await fetchWeather(url);
-      } catch (error) {
-        console.log(error, "==error");
-      }
-      return;
-    }
-
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const { latitude, longitude } = position.coords;
-          const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
-
-          try {
-            await fetchWeather(url);
-          } catch (error) {
-            console.log(error, "==error");
-          }
-        },
-        async () => {
-          const fallbackUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
-          try {
-            await fetchWeather(fallbackUrl);
-          } catch (error) {
-            console.log(error, "==error");
-          }
-        }
-      );
-      return;
-    }
-
-    const fallbackUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
-    try {
-      await fetchWeather(fallbackUrl);
+        icon: icon
+      })
     } catch (error) {
-      console.log(error, "==error");
+      console.log(error,'==error')
     }
-  }, [allIcons]);
+  };
 
   useEffect(() => {
-    search();
-  }, [search]);
+    search("London");
+  }, []);
 
   return (
     <div className="weather">
