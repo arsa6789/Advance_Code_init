@@ -9,6 +9,7 @@ import snow_icon from "../Assets/snow.png";
 import wind_icon from "../Assets/wind.png";
 import { useEffect, useRef, useState } from "react";
 
+// weather
 const Weather = () => {
   const inputRef = useRef()
   const [weatherData, setWeatherData] = useState(false);
