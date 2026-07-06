@@ -20,6 +20,7 @@ Advance_Code_init/
 │   │   └── Weather App/       # Weather app UI and logic
 │   └── ReactJS/
 │       ├── React Practice/     # React learning exercises
+│       ├── Supabase/           # React + Supabase practice app
 │       └── TicTacToe/          # React Tic-Tac-Toe app
 ├── Pheonix code/               # Static web page practice
 ├── package.json                # Root dependencies for the repo
@@ -61,6 +62,14 @@ Navigate into a React folder and install dependencies:
 
 ```bash
 cd "Hackathon practice/ReactJS/TicTacToe"
+npm install
+npm run dev
+```
+
+For the Supabase project:
+
+```bash
+cd "Hackathon practice/ReactJS/Supabase"
 npm install
 npm run dev
 ```

@@ -8,6 +8,7 @@
     "target": "ES6",
     "module": "ESNext",
     "moduleResolution": "node",
+    "ignoreDeprecations": "6.0",
     "allowSyntheticDefaultImports": true,
     "checkJs": false
   },
