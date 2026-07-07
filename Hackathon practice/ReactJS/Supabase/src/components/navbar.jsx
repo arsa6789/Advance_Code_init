@@ -14,7 +14,7 @@ function Navbar() {
               end
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
-              Linktree
+              Linktree🌴
             </NavLink>
           </div>
           <ul className="nav-links flex gap-5 py-2 text-gray-600">
