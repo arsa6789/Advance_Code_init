@@ -11,6 +11,7 @@ import Pricing from "./pages/Pricing";
 import Learn from "./pages/Learn";
 import Marketplace from "./pages/Marketplace";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Dashboard from "./pages/dashboard";
 const r = React;
 const AppLayout = () => (
   <>
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       { path: "/marketplace", element: <Marketplace /> },
       { path: "/learn", element: <Learn /> },
       { path: "/pricing", element: <Pricing /> },
+      { path: "/dashboard", element: <Dashboard /> },
     ],
   },
   { path: "/signin", element: <Signin /> },

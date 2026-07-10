@@ -1,9 +1,16 @@
 import React from "react";
 import Imag from "../assets/Untitled.png";
 import Vid from "../assets/video.mp4";
+import { useNavigate } from "react-router-dom";
 const r = React;
 const DefaultPage = () => {
   console.log(r);
+
+  const navigate = useNavigate();
+  const goToSignUp = () => {
+    navigate("/signup");
+  };
+
   return (
     <>
       <section className="w-full bg-[#d2e823] min-h-screen pt-36 pb-12 px-6 sm:px-6 lg:pt-44">
@@ -85,8 +92,9 @@ const DefaultPage = () => {
             </p>
 
             <button
-              type="submit"
-              className="bg-[#d2e823] text-black font-bold text-md px-1 w-80 py-4 rounded-full hover:bg-[#15271d] transition-colors whitespace-nowrap"
+              type="button" // <--- Isko 'submit' se 'button' lazmi karein
+              onClick={goToSignUp}
+              className="bg-[#d2e823] text-black font-bold text-md px-8 w-80 py-4 rounded-full hover:bg-yellow-400 transition-colors whitespace-nowrap"
             >
               Get started for free
             </button>

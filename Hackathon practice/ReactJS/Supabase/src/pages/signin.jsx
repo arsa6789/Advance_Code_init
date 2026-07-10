@@ -1,10 +1,11 @@
 import React from "react";
 import imag from "../assets/banner1.png";
-import FloatingLabelInput from '../components/input and button'
+import FloatingLabelInput1 from '../components/inputButtonCopy'
 const r = React;
 
 const Signup = () => {
   console.log(r);
+
   return (
     <div className="grid grid-cols-2 w-screen h-screen">
       <div className="">
@@ -27,7 +28,7 @@ const Signup = () => {
           <br />
           <p className="text-gray-600 py-2">Log in to your Linktree</p>
           <div className="m-7 flex justify-center items-center">
-            <FloatingLabelInput/>
+            <FloatingLabelInput1/>
           </div>
           <span className="text-[10px] text-gray-500">By clicking <span className="font-bold">Create account</span>, you agree to Linktree's <a href="linktr.ee/privacy" ><u>privacy notice</u></a>, <a href="linktr.ee/terms"><u>T&Cs</u></a> and to <br /> receive offers, news and updates.</span>
         </form>

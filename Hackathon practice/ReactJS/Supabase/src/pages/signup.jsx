@@ -1,10 +1,11 @@
 import React from "react";
 import imag from "../assets/banner.png";
-import FloatingLabelInput from '../components/input and button'
+import FloatingLabelInput from '../components/inputButton'
 const r = React;
 
 const Signup = () => {
   console.log(r);
+
   return (
     <div className="grid grid-cols-2 w-screen h-screen">
       <div className="bg-white p-4">
